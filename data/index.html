@@ -5,8 +5,12 @@
     categories: [
       { name: "Work", commands: [
         { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q={}' },
+        { key: 'd', name: 'DockerHub', url: 'https://hub.docker.com/', search: '/search/?q={}' },
         { key: 'm', name: 'Inbox', url: 'https://inbox.google.com', search: '/search/{}' },
         { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text={}' },
+        { key: 'aws', name: 'AmazonWebServices', url: 'https://aws.amazon.com/', search: false },
+        { key: 'azure', name: 'Azure', url: 'https://portal.azure.com', search: false },
+        { key: 'do', name: 'DigitalOcean', url: 'https://cloud.digitalocean.com/', search: false },
       ] },
       { name: "Lurk", commands: [
         { key: 'i', name: 'Instagram', url: 'https://www.instagram.com', search: false },
@@ -18,15 +22,13 @@
         { key: 'l', name: 'LineRadio', url: 'https://linerad.io', search: '/#/{}' },
         { key: 's', name: 'SoundCloud', url: 'https://soundcloud.com/discover', search: '/search?q={}' },
       ] },
+      { name: "Shop", commands: [
+        { key: 'a', name: 'Amazon', url: 'https://amazon.com', search: '/s/?url=search-alias%3Daps&field-keywords={}' },
+      ] },
       { name: "Watch", commands: [
         { key: 'n', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search?q={}' },
         { key: 'w', name: 'Twitch', url: 'https://www.twitch.tv/directory/following', search: false },
         { key: 'y', name: 'YouTube', url: 'https://youtube.com/feed/subscriptions', search: '/results?search_query={}' },
-      ] },
-      { name: "Download", commands: [
-        { key: 'T', name: 'TPB', url: 'https://thepiratebay.org', search: '/search/{}' },
-        { key: 'Y', name: 'YIFY', url: 'https://yts.ag/browse-movies/0/1080p/all/7/latest', search: '/browse-movies/{}/1080p/all/0/rating' },
-        { key: '7', name: '7digital', url: 'https://us.7digital.com', search: '/search?q={}' },
       ] },
     ],
 
@@ -46,7 +48,7 @@
     instantRedirect: false,
 
     // suggest your most popular queries as you type.
-    suggestions: false,
+    suggestions: true,
 
     // max amount of suggestions to display.
     suggestionsLimit: 4,
